@@ -33,11 +33,11 @@ public class Main {
         ContractService service = new ContractService(new PaypalService());
         service.processContract(contract, n);
 
-        System.out.println("Parcelas: ");
+        System.out.println("Installments: ");
         for (Installment installment : contract.getInstallmentList()) {
             System.out.println(installment);
         }
 
-
+        scan.close();
     }
 }
